@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+            binding = ActivityMainBinding.inflate(layoutInflater)
+            setContentView(binding.root)
         binding.btnClearAll.setOnClickListener {
             binding.txtResult.text = ""
             binding.txtSolution.text = ""
@@ -74,6 +74,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnPoint.setOnClickListener {
             binding.txtResult.append(".")
+        }
+        binding.btnDzero.setOnClickListener {
+            binding.txtResult.append("00")
         }
         binding.btnPercentage.setOnClickListener {
             binding.txtResult.append("%")
